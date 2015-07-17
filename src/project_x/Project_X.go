@@ -11,11 +11,12 @@ func main() {
 	Detect_Hacker_Name()
 
 	//TEST
-	var str1 = "Ivan"
-	var str2 = "navI"
+	//var str1 = "Ivan"
+	//var str2 = "navI"
 	//str := []string{"Ivan","navI"}
 
-	fmt.Println(arrays_and_strings.Detect_if_anagram(str1 , str2))
+	//fmt.Println(arrays_and_strings.Detect_if_anagram(str1 , str2))
+	fmt.Println(arrays_and_strings.Detect_If_String_Has_Unique_Chars("abcdefghijklmnop"))
 }
 
 func Detect_Hacker_Name() {
