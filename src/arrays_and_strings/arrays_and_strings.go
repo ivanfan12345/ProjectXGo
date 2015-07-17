@@ -25,7 +25,6 @@ func Detect_if_anagram(str1 string , str2 string) bool {
 				} else {
 					return false
 				}
-
 			  return true
 	}
 }
@@ -36,3 +35,12 @@ func Sort_String(str string) string {
 		sort.Strings(newStr)
 		return strings.Join(newStr,"")
 	}
+
+  // Reverse returns its argument string reversed rune-wise left to right.
+func Reverse_String(s string) string {
+  r := []rune(s)
+  for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+  		r[i], r[j] = r[j], r[i]
+  }
+  return string(r)
+}

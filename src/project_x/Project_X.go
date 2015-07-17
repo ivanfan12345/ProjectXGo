@@ -1,8 +1,9 @@
 // You can edit this code!
 // Click here and start typing.
 package main
-import "fmt"
-import "strings"
+import ("fmt"
+			  "arrays_and_strings"
+       )
 
 
 func main() {
@@ -10,11 +11,11 @@ func main() {
 	Detect_Hacker_Name()
 
 	//TEST
-	var str1 = "ivan"
-	var str2 = "navi"
-	//str := []string{"ivan","navi"}
+	var str1 = "Ivan"
+	var str2 = "navI"
+	//str := []string{"Ivan","navI"}
 
-	fmt.Println(Detect_if_anagram(str1 , str2))
+	fmt.Println(arrays_and_strings.Detect_if_anagram(str1 , str2))
 }
 
 func Detect_Hacker_Name() {
@@ -22,4 +23,5 @@ func Detect_Hacker_Name() {
 	var input string
 	fmt.Scanf("%s",&input)
 	fmt.Println("Welcome ", input ,"let's hack!")
+	fmt.Println("Your reversed hacker name is: ", arrays_and_strings.Reverse_String(input))
 }
