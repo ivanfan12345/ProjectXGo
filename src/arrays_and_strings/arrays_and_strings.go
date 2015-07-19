@@ -32,18 +32,26 @@ func Detect_if_anagram(str1 string , str2 string) bool {
 //Write a function to detect if string has unique characters.
 func Detect_If_String_Has_Unique_Chars(str string) bool {
   //1. itterate through all the chars and check to see if the char exist in the map if it does return false if not return true.
-  var x map[string]int
+  //var myMap map[byte]bool
+  myMap := make(map[byte]bool)
+
   //loop through string
-  //fmt.Println("Ivan was here", str)
+  /*fmt.Println("Ivan was here", str)
+  for i := 0 ; i < len(str) ; i++ {
+    println(i)
+    fmt.Printf("%c \n" ,str[i])
+  }
+  */
+
 
   for i := 0 ; i < len(str) ; i++ {
     //println(i)
     fmt.Printf("%c \n" ,str[i])
-    if
-    x[str[i]] = 1
-
-
-    
+    if myMap[str[i]] == false  {
+      myMap[str[i]] = true
+    } else {
+      return false
+    }
   }
   return true
 }

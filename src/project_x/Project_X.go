@@ -16,7 +16,7 @@ func main() {
 	//str := []string{"Ivan","navI"}
 
 	//fmt.Println(arrays_and_strings.Detect_if_anagram(str1 , str2))
-	fmt.Println(arrays_and_strings.Detect_If_String_Has_Unique_Chars("abcdefghijklmnop"))
+	fmt.Println(arrays_and_strings.Detect_If_String_Has_Unique_Chars("abcdefghijklmnaop"))
 }
 
 func Detect_Hacker_Name() {
