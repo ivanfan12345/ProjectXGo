@@ -1,3 +1,4 @@
-# ProjectXGo
-![Demo](http://www.sorting-algorithms.com/animation/20/random-initial-order/merge-sort.gif)
+# ProjectX Go Edition
+![alt tag](https://talks.golang.org/2012/splash/appenginegophercolor.jpg)
+
 
