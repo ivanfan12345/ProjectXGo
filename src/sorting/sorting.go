@@ -91,8 +91,17 @@ func Merge(left []int, right []int) []int {
   index := 0
   merged_array := make([]int, 0 , len(left) + len(right))
 
+  fmt.Println(left_index)
+  fmt.Println(right_index)
+  fmt.Println(left)
+  fmt.Println(right)
+  fmt.Println(len(merged_array))
+
+
   for left_index < len(left) && right_index < len(right) {
+    fmt.Println(index)
     if left[left_index] < right[right_index] {
+      fmt.Println("HELLO IVAN")
       merged_array[index] = left[left_index]
       index++
       left_index++
@@ -102,6 +111,10 @@ func Merge(left []int, right []int) []int {
       right_index++
     }
   }
+
+
+
+
   for left_index < len(left) {
     merged_array[index] = left[left_index]
     index++
