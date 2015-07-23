@@ -19,7 +19,7 @@ func main() {
 	//fmt.Println(arrays_and_strings.Detect_If_String_Has_Unique_Chars("abcdefghijklmnaop"))
 
 	fmt.Println("BEFORE: ",test)
-	sorting.Merge_Sort(sort.IntSlice(test));
+	test = sorting.Merge_Sort(sort.IntSlice(test));
 	fmt.Println("AFTER: ",test)
 }
 

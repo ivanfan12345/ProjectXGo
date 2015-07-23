@@ -82,51 +82,45 @@ func Merge_Sort(data []int) []int {
   //left of mid
   left := Merge_Sort(data[:middle])
   right := Merge_Sort(data[middle:])
-  return Merge(left,right)
+  data = Merge(left,right)
+  fmt.Println(data)
+  return data
 }
 
 func Merge(left []int, right []int) []int {
   left_index := 0
   right_index := 0
   index := 0
-  merged_array := make([]int, 0 , len(left) + len(right))
-
-  fmt.Println(left_index)
-  fmt.Println(right_index)
-  fmt.Println(left)
-  fmt.Println(right)
-  fmt.Println(len(merged_array))
-
+  merged_array := make([]int, 0)
 
   for left_index < len(left) && right_index < len(right) {
     fmt.Println(index)
     if left[left_index] < right[right_index] {
       fmt.Println("HELLO IVAN")
-      merged_array[index] = left[left_index]
+      //[index] = left[left_index]
+      merged_array = append(merged_array,left[left_index])
       index++
       left_index++
     } else {
-      merged_array[index] = right[right_index]
+      //merged_array[index] = right[right_index]
+      merged_array = append(merged_array,right[right_index])
       index++
       right_index++
     }
   }
-
-
-
-
   for left_index < len(left) {
-    merged_array[index] = left[left_index]
+    //merged_array[index] = left[left_index]
+    merged_array = append(merged_array,left[left_index])
     index++
     left_index++
   }
   for right_index < len(right) {
-    merged_array[index] = right[right_index]
+    //merged_array[index] = right[right_index]
+    merged_array = append(merged_array,right[right_index])
     index++
     right_index++
   }
   return merged_array
 }
-
 
 // Quick Sort O(n log(n))
