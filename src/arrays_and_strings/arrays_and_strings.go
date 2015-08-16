@@ -71,3 +71,61 @@ func Reverse_String(s string) string {
   }
   return string(r)
 }
+
+//Fizz Buzz
+/*
+"Write a program that prints the numbers from 1 to 100. But for multiples of
+three print “Fizz” instead of the number and for the multiples of five print “Buzz”.
+For numbers which are multiples of both three and five print “FizzBuzz”."
+*/
+func Fizz_Buzz(x int) {
+
+	fmt.Println("*************************")
+	fmt.Println("WELCOME TO THE FIZZ BUZZ!")
+	fmt.Println("*************************")
+
+	for i := 1 ; i < x ; i++ {
+		switch {
+		case i%15 == 0:
+			fmt.Println("FIZZBUZZ")
+		case i%5 == 0:
+			fmt.Println("BUZZ")
+		case i%3 ==0:
+			fmt.Println("FIZZ")
+		default:
+			fmt.Println(i)
+		}
+	}
+}
+
+func Fizz_Buzz_2(x int) {
+	fmt.Println("*************************")
+	fmt.Println("WELCOME TO THE FIZZ BUZZ 2!")
+	fmt.Println("*************************")
+
+	for i := 1 ; i < x ; i++ {
+		if i%15 == 0 {
+			fmt.Println("FIZZ BUZZ")
+		} else if i%5 == 0 {
+			fmt.Println("BUZZ")
+		} else if i%3 == 0 {
+			fmt.Println("FIZZ")
+		} else {
+			fmt.Println(i)
+		}
+	}
+}
+/*
+
+if x%15 == 0 {
+	fmt.Println("FIZZ BUZZ")
+} else if x%5 == 0 {
+	fmt.Println("Shit")
+} else if x%3 == 0 {
+	fmt.Println("BUZZ")
+} else {
+	fmt.Println(i)
+}
+
+
+*/
