@@ -115,6 +115,35 @@ func Fizz_Buzz_2(x int) {
 		}
 	}
 }
+
+// Write a function that returns the smallest number in a list.
+func Find_Smallest(arr []int ) {
+	fmt.Println("FIND SMALLEST VALUE")
+	var smallest = 99999999
+	for i:=1 ; i < len(arr) ; i++ {
+			//fmt.Println(arr[i])
+			if arr[i] <= smallest {
+				smallest = arr[i]
+			}
+		}
+		fmt.Println("Smallest: " , smallest )
+}
+
+// Write a function that returns the largest number in a list.
+func Find_Largest(arr []int ) {
+	fmt.Println("FIND LARGEST VALUE")
+	var largest = -99999999
+	for i:=1 ; i < len(arr) ; i++ {
+			//fmt.Println(arr[i])
+			if largest <= arr[i] {
+				largest = arr[i]
+			}
+		}
+		fmt.Println("Largest: " , largest )
+}
+
+
+
 /*
 
 if x%15 == 0 {
