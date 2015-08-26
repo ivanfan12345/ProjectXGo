@@ -28,10 +28,17 @@ func main() {
 	//arr  := []int{66,55,4,-3,3,3,33,444}
 	//arrays_and_strings.Find_Largest(arr)
 
-	var nth = 99
-	for i := 0 ; i < nth ; i++ {
-		fmt.Println("fib(",i,")",recursion.Fib(i))
-	}
+	//var nth = 99
+	//for i := 0 ; i < nth ; i++ {
+	//	fmt.Println("fib(",i,")",recursion.Fib(i))
+	//}
+
+	fmt.Println(recursion.Get_Nth_Fib_Num_Iter(1))
+
+
+
+
+
 }
 
 func Detect_Hacker_Name() {

@@ -1,4 +1,4 @@
-package sorting
+package sorting_and_searching
 //import "strings"
 //import "fmt"
 import "sort"
