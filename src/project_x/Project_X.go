@@ -5,8 +5,6 @@ import "fmt"
 //import "recursion"
 import "arrays_and_strings"
 import "sorting_searching"
-				//"sort"
-				//"sorting"
 
 func main() {
 	fmt.Println(" ========== Welcome to ProjectX Go ==========\n\n")
@@ -36,8 +34,8 @@ func main() {
 
 	//fmt.Println(recursion.Get_Nth_Fib_Num_Iter(1))
 
-	test := []int{2,3,45,3,2,1,-2,444,3,3,2}
-	fmt.Println(sorting_searching.Find_Two_Sum(test , 48))
+	test := []int{-4,-1,0,4,5,34,65,555}
+	fmt.Println(sorting_searching.Binary_Search_Iter(test , 65))
 
 
 
