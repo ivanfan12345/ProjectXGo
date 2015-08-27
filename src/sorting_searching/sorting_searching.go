@@ -1,17 +1,17 @@
-package sorting_and_searching
+package sorting_searching
 //import "strings"
 //import "fmt"
 import "sort"
 import "fmt"
 //import "strings"
-//Slow Sorts O(N^2)
-/***** Selection Sort
+
+/************************* Selection Sort *************************
 Not stable
 O(1) extra space
 Θ(n2) comparisons
 Θ(n) swaps
 Not adaptive
-******/
+************************* Selection Sort *************************/
 func Selection_Sort(input []int) []int {
   /*for i := 0 ; i < len(input) ; i++ {
     fmt.Println(input[i])
@@ -47,21 +47,21 @@ func Selection_Sort_Interface(array sort.Interface) {
     fmt.Println("SWAP!" , array)
   }
 }
-//Insertion Sort O(N^2)
+/************************* Insertion Sort *************************
+O(N^2)
 /*
 Stable
 O(1) extra space
 O(n2) comparisons and swaps
 Adaptive: O(n) time when nearly sorted
 Very low overhead
-*/
+************************** Insertion Sort *************************/
 func Insertion_Sort(input []int) []int {
   return input
 }
 
-
-//Bubble Sort O(N^2)
-
+/************************* Bubble Sort *************************
+ O(N^2)
 // Optimal Sorts
 // Merge Sort O(n log(n))
 /*
@@ -71,7 +71,7 @@ Stable
 Θ(n·lg(n)) time
 Not adaptive
 Does not require random access to data
-*/
+************************* Bubble Sort *************************/
 func Merge_Sort(data []int) []int {
   if len(data) == 1 {
     return data
@@ -124,3 +124,29 @@ func Merge(left []int, right []int) []int {
 }
 
 // Quick Sort O(n log(n))
+
+//Find two pairs that sum up to target.
+func Find_Two_Sum(data []int , target int ) []int {
+  var difference = 0
+  pair := make([]int, 2)
+  var m = map[int]int{}
+  for i , element := range data {
+    fmt.Println("i:",i)
+    fmt.Println("element:", element)
+    if m[element] != 0 {
+      //found pair
+      pair[0] = m[element]
+      pair[1] = element
+      fmt.Println("FOUND PAIR!!!")
+      return pair
+    } else {
+      //store difference
+      difference = target - element
+      m[element] = difference
+    }
+  }
+  fmt.Println("NOT FOUND!!! :(")
+  return pair
+}
+
+//Binary Search Iter and Recursively

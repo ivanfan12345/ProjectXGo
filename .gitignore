@@ -8,3 +8,5 @@ bin/Project_X
 *.a
 
 *.a
+
+src/project_x/Project_X
