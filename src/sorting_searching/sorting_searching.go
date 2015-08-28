@@ -177,12 +177,43 @@ func Binary_Search_Iter(data []int, target int) int {
   }
   return -1
 }
+// You are given two sorted arrays, A and B, where A has a large enough buffer at
+// the end to hold B. Write a method to merge B into A in sorted order.
+func Merge_Two_Sorted_arrays(A []int , B []int) []int {
+  merged_array := make([]int, len(A) +len(B))
+  indexA := 0
+  indexB := 0
+  index := 0
+
+  for indexA < len(A) && indexB < len(B) {
+      if A[indexA] < B[indexB] {
+        merged_array = append(merged_array,A[indexA])
+        indexA++
+        index++
+      } else {
+        merged_array =  append(merged_array,B[indexB])
+        indexB++
+        index++
+      }
+  }
+  for indexA < len(A) {
+    merged_array = append(merged_array,A[indexA])
+    indexA++
+    index++
+  }
+  for indexB < len(B) {
+    merged_array = append(merged_array,B[indexB])
+    indexB++
+    index++
+  }
+  return merged_array
+}
+
 
 
 
 
 /***** CTCI
-- You are given two sorted arrays, A and B, where A has a large enough buffer at the end to hold B. Write a method to merge B into A in sorted order. pg 360
 - Write a method to sort an array of strings so that all the anagrams are next to each other. _._ pg 361
 - Given a sorted array of n integers that has been rotated an unknown number of times, write code to find an element in the array. You may assume that the array was originally sorted in increasing order.
        EXAMPLE
